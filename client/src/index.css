@@ -1,0 +1,128 @@
+@import "tailwindcss";
+
+/* Custom CSS properties that complement Tailwind */
+@layer base {
+  :root {
+    --bg-app: #08090d;
+    --bg-surface: #10121a;
+    --bg-surface-elevated: #161924;
+    --brand-primary: #8b5cf6;
+    --brand-secondary: #3b82f6;
+    --brand-accent: #06b6d4;
+    --color-success: #10b981;
+    --color-warning: #f59e0b;
+    --color-danger: #f43f5e;
+    --border-line: rgba(255, 255, 255, 0.06);
+    color-scheme: dark;
+  }
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    background-color: var(--bg-app);
+    color: #f8fafc;
+    font-family: 'Inter', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    min-height: 100vh;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar { width: 6px; }
+  ::-webkit-scrollbar-track { background: var(--bg-app); }
+  ::-webkit-scrollbar-thumb { background: #1e2235; border-radius: 4px; }
+  ::-webkit-scrollbar-thumb:hover { background: #475569; }
+}
+
+@layer components {
+  /* Glassmorphism card */
+  .glass-card {
+    @apply rounded-2xl border border-white/5 bg-white/[0.03] backdrop-blur-xl shadow-[0_8px_30px_rgba(0,0,0,0.4)] transition-all duration-300;
+  }
+  .glass-card:hover {
+    @apply -translate-y-0.5 border-purple-500/20 shadow-[0_12px_35px_rgba(0,0,0,0.5),0_0_20px_rgba(139,92,246,0.1)];
+  }
+
+  /* Buttons */
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-lg font-semibold text-white text-sm cursor-pointer transition-all duration-200 bg-gradient-to-br from-violet-500 to-violet-700 shadow-[0_4px_15px_rgba(139,92,246,0.3)] hover:shadow-[0_6px_20px_rgba(139,92,246,0.45)] hover:-translate-y-px hover:brightness-110;
+    font-family: 'Outfit', sans-serif;
+  }
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-lg font-semibold text-sm cursor-pointer transition-all duration-200 bg-transparent border border-white/10 text-slate-300 hover:bg-white/5 hover:border-slate-500;
+    font-family: 'Outfit', sans-serif;
+  }
+  .btn-accent {
+    @apply inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-lg font-semibold text-white text-sm cursor-pointer transition-all duration-200 bg-gradient-to-br from-blue-500 to-cyan-500 shadow-[0_4px_15px_rgba(59,130,246,0.25)] hover:shadow-[0_6px_20px_rgba(59,130,246,0.4)] hover:-translate-y-px;
+    font-family: 'Outfit', sans-serif;
+  }
+  .btn-danger {
+    @apply inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-lg font-semibold text-sm cursor-pointer transition-all duration-200 bg-rose-500/10 border border-rose-500/20 text-rose-400 hover:bg-rose-500 hover:text-white;
+    font-family: 'Outfit', sans-serif;
+  }
+
+  /* Form inputs */
+  .form-input, .form-select, .form-textarea {
+    @apply w-full bg-black/40 border border-white/[0.06] rounded-lg text-slate-100 px-4 py-2.5 text-sm transition-all duration-150 outline-none focus:border-violet-500 focus:ring-2 focus:ring-violet-500/20 focus:bg-white/5;
+    font-family: 'Inter', sans-serif;
+  }
+  .form-textarea {
+    @apply resize-y min-h-[100px];
+  }
+  .form-label {
+    @apply text-xs font-semibold uppercase tracking-widest text-slate-400;
+    font-family: 'Outfit', sans-serif;
+  }
+
+  /* Status badges */
+  .badge-pending {
+    @apply inline-flex items-center px-2.5 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-amber-500/10 text-amber-400 border border-amber-500/20;
+  }
+  .badge-accepted {
+    @apply inline-flex items-center px-2.5 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-blue-500/10 text-blue-300 border border-blue-500/20;
+  }
+  .badge-completed {
+    @apply inline-flex items-center px-2.5 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-emerald-500/10 text-emerald-400 border border-emerald-500/20;
+  }
+  .badge-declined {
+    @apply inline-flex items-center px-2.5 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-rose-500/10 text-rose-400 border border-rose-500/20;
+  }
+
+  /* Gradient text */
+  .brand-gradient {
+    @apply bg-gradient-to-br from-white via-violet-200 to-cyan-400 bg-clip-text text-transparent;
+  }
+  .text-gradient-purple {
+    @apply bg-gradient-to-r from-violet-400 to-blue-400 bg-clip-text text-transparent;
+  }
+
+  /* Spinner */
+  .spinner {
+    @apply border-4 border-white/5 border-t-violet-500 rounded-full w-10 h-10 animate-spin mx-auto;
+  }
+
+  /* Trust pill */
+  .trust-pill {
+    @apply inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-violet-500/[0.08] border border-violet-500/20 text-violet-300 text-xs font-bold uppercase tracking-widest;
+  }
+
+  /* Star rating */
+  .star-icon {
+    @apply w-[17px] h-[17px] text-slate-600;
+  }
+  .star-filled {
+    @apply text-amber-400 fill-amber-400;
+  }
+  .star-interactive {
+    @apply cursor-pointer transition-transform duration-150 hover:scale-110;
+  }
+}

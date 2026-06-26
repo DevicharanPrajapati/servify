@@ -1,0 +1,150 @@
+[
+  {
+    "_id": "cust_user1",
+    "name": "John Doe",
+    "email": "john@doe.com",
+    "password": "$2a$10$pOvSKYDdLzQ6I33o9kVqXeFrR8nTHoiZvA0ZY/RUHRX905s9/6M2G",
+    "role": "customer",
+    "avatar": "https://api.dicebear.com/7.x/adventurer/svg?seed=John",
+    "phone": "+1 (555) 012-3456",
+    "address": "100 Main St, Boston, MA",
+    "createdAt": "2026-06-26T11:51:52.318Z",
+    "updatedAt": "2026-06-26T11:51:52.318Z"
+  },
+  {
+    "_id": "prov_electrician1",
+    "name": "Alex Volt",
+    "email": "alex@volt.com",
+    "password": "$2a$10$pOvSKYDdLzQ6I33o9kVqXeFrR8nTHoiZvA0ZY/RUHRX905s9/6M2G",
+    "role": "provider",
+    "avatar": "https://api.dicebear.com/7.x/adventurer/svg?seed=Alex",
+    "phone": "+1 (555) 019-2834",
+    "address": "42 Beacon Hill Rd, Boston, MA",
+    "providerInfo": {
+      "category": "electrician",
+      "bio": "Certified Master Electrician with 8+ years of residential and commercial wiring, troubleshooting, and lighting installations. Always punctual and safety-first.",
+      "hourlyRate": 50,
+      "experience": 8,
+      "rating": 4.8,
+      "reviewsCount": 2,
+      "reviews": [
+        {
+          "customerName": "David Miller",
+          "rating": 5,
+          "comment": "Excellent electrical panel repair! Punctual and professional.",
+          "date": "2026-05-17T11:51:52.317Z"
+        },
+        {
+          "customerName": "Sarah Jenkins",
+          "rating": 4,
+          "comment": "Fixed my outdoor lighting issue quickly. Cleaned up afterwards.",
+          "date": "2026-06-06T11:51:52.317Z"
+        }
+      ]
+    },
+    "createdAt": "2026-06-26T11:51:52.317Z",
+    "updatedAt": "2026-06-26T11:51:52.318Z"
+  },
+  {
+    "_id": "prov_plumber1",
+    "name": "Mario Flow",
+    "email": "mario@flow.com",
+    "password": "$2a$10$pOvSKYDdLzQ6I33o9kVqXeFrR8nTHoiZvA0ZY/RUHRX905s9/6M2G",
+    "role": "provider",
+    "avatar": "https://api.dicebear.com/7.x/adventurer/svg?seed=Mario",
+    "phone": "+1 (555) 043-9821",
+    "address": "15 Maple Ave, Cambridge, MA",
+    "providerInfo": {
+      "category": "plumber",
+      "bio": "Expert plumber handling all leak repairs, pipe replacements, drain cleaning, water heaters, and toilet installations. Emergency services available.",
+      "hourlyRate": 65,
+      "experience": 12,
+      "rating": 5,
+      "reviewsCount": 1,
+      "reviews": [
+        {
+          "customerName": "Emily Stone",
+          "rating": 5,
+          "comment": "Repaired our water heater in under an hour! Incredible service.",
+          "date": "2026-06-16T11:51:52.318Z"
+        }
+      ]
+    },
+    "createdAt": "2026-06-26T11:51:52.318Z",
+    "updatedAt": "2026-06-26T11:51:52.318Z"
+  },
+  {
+    "_id": "prov_mechanic1",
+    "name": "Elena Torque",
+    "email": "elena@torque.com",
+    "password": "$2a$10$pOvSKYDdLzQ6I33o9kVqXeFrR8nTHoiZvA0ZY/RUHRX905s9/6M2G",
+    "role": "provider",
+    "avatar": "https://api.dicebear.com/7.x/adventurer/svg?seed=Elena",
+    "phone": "+1 (555) 078-4569",
+    "address": "280 Industrial Pkwy, Somerville, MA",
+    "providerInfo": {
+      "category": "mechanic",
+      "bio": "Mobile ASE-Certified automotive technician. I come to your home or office for oil changes, brake pads, diagnostics, and belt replacements. Save a trip to the garage!",
+      "hourlyRate": 70,
+      "experience": 10,
+      "rating": 4.9,
+      "reviewsCount": 2,
+      "reviews": [
+        {
+          "customerName": "Robert Vance",
+          "rating": 5,
+          "comment": "Elena did a mobile brake repair in my driveway. Extremely convenient and fair price!",
+          "date": "2026-06-11T11:51:52.318Z"
+        },
+        {
+          "customerName": "Clara Oswald",
+          "rating": 4.8,
+          "comment": "Super fast diagnostic. She found the engine sensor problem immediately.",
+          "date": "2026-06-21T11:51:52.318Z"
+        }
+      ]
+    },
+    "createdAt": "2026-06-26T11:51:52.318Z",
+    "updatedAt": "2026-06-26T11:51:52.318Z"
+  },
+  {
+    "_id": "prov_cleaner1",
+    "name": "Jane Bright",
+    "email": "jane@bright.com",
+    "password": "$2a$10$pOvSKYDdLzQ6I33o9kVqXeFrR8nTHoiZvA0ZY/RUHRX905s9/6M2G",
+    "role": "provider",
+    "avatar": "https://api.dicebear.com/7.x/adventurer/svg?seed=Jane",
+    "phone": "+1 (555) 091-6677",
+    "address": "88 Ocean Drive, Revere, MA",
+    "providerInfo": {
+      "category": "cleaner",
+      "bio": "Professional house and office cleaning services. Detail-oriented, pet-friendly, using eco-friendly products. One-off deep cleans or weekly visits.",
+      "hourlyRate": 35,
+      "experience": 6,
+      "rating": 4.7,
+      "reviewsCount": 3,
+      "reviews": [
+        {
+          "customerName": "Frank Sinatra",
+          "rating": 5,
+          "comment": "House is sparkling clean every single time. 10/10.",
+          "date": "2026-06-20T11:51:52.318Z"
+        },
+        {
+          "customerName": "George Costanza",
+          "rating": 4,
+          "comment": "Good cleaning, though missed a spot behind the couch. Still very happy.",
+          "date": "2026-06-01T11:51:52.318Z"
+        },
+        {
+          "customerName": "Elaine Benes",
+          "rating": 5,
+          "comment": "Excellent deep clean before our holiday event. Recommended!",
+          "date": "2026-06-24T11:51:52.318Z"
+        }
+      ]
+    },
+    "createdAt": "2026-06-26T11:51:52.318Z",
+    "updatedAt": "2026-06-26T11:51:52.318Z"
+  }
+]
